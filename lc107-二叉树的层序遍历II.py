@@ -4,6 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from __future__ import annotations
 from collections import deque
 
 
@@ -20,7 +21,7 @@ class Solution:
             level_size = len(queue)
             level_values = []
             for _ in range(level_size):
-                node = queue.popleft
+                node = queue.popleft()
                 level_values.append(node.val)
                 if node.left:
                     queue.append(node.left)
